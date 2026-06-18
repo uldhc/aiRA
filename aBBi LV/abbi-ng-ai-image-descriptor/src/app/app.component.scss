@@ -131,7 +131,8 @@ mat-stepper {
 .app-title-text {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  align-items: flex-start;
+  text-align: left;
 }
 .app-title-text h1 {
   margin: 0;
