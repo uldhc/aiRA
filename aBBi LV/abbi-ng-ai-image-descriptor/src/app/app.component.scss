@@ -74,9 +74,13 @@ mat-stepper {
   background-color: #FCFAF6; // lielā šūna
 }
 .app-title {
-  text-align: center;
-  margin: 2rem 0 1.5rem;
-  color: #1C1B2E  ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 100%;
+
+  margin-bottom: 2rem;
 }
 
 .app-title h1 {
