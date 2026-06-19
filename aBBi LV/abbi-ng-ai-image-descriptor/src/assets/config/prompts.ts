@@ -1,17 +1,41 @@
 import { TaskTypeConfig } from "../../app/types/prompt.types"
 
 import altTextSwedishPrompt from '../prompts/altTextMainSwedish.txt?raw';
-import altTextFinnishPrompt from '../prompts/altTextMainFinnish.txt?raw';
-import altTextEnglishPrompt from '../prompts/altTextMainEnglish.txt?raw';
-import altTextLatvianPrompt from '../prompts/altTextMainLatvian.txt?raw';
 import altTextFilenameSwedishPrompt from '../prompts/altTextFilenameSwedish.txt?raw';
-import altTextFilenameFinnishPrompt from '../prompts/altTextFilenameFinnish.txt?raw';
-import altTextFilenameEnglishPrompt from '../prompts/altTextFilenameEnglish.txt?raw';
-import altTextFilenameLatvianPrompt from '../prompts/altTextFilenameLatvian.txt?raw';
 import altTextTranslateSwedishPrompt from '../prompts/altTextTranslateSwedish.txt?raw';
+
+import altTextFinnishPrompt from '../prompts/altTextMainFinnish.txt?raw';
+import altTextFilenameFinnishPrompt from '../prompts/altTextFilenameFinnish.txt?raw';
 import altTextTranslateFinnishPrompt from '../prompts/altTextTranslateFinnish.txt?raw';
+
+import altTextEnglishPrompt from '../prompts/altTextMainEnglish.txt?raw';
+import altTextFilenameEnglishPrompt from '../prompts/altTextFilenameEnglish.txt?raw';
 import altTextTranslateEnglishPrompt from '../prompts/altTextTranslateEnglish.txt?raw';
+
+import altTextLatvianPrompt from '../prompts/altTextMainLatvian.txt?raw';
+import altTextFilenameLatvianPrompt from '../prompts/altTextFilenameLatvian.txt?raw';
 import altTextTranslateLatvianPrompt from '../prompts/altTextTranslateLatvian.txt?raw';
+
+import altTextLithuanianPrompt from '../prompts/altTextMainLithuanian.txt?raw';
+import altTextFilenameLithuanianPrompt from '../prompts/altTextFilenameLithuanian.txt?raw';
+import altTextTranslateLithuanianPrompt from '../prompts/altTextTranslateLithuanian.txt?raw';
+
+import altTextDanishPrompt from '../prompts/altTextMainDanish.txt?raw';
+import altTextFilenameDanishPrompt from '../prompts/altTextFilenameDanish.txt?raw';
+import altTextTranslateDanishPrompt from '../prompts/altTextTranslateDanish.txt?raw';
+
+import altTextEstonianPrompt from '../prompts/altTextMainEstonian.txt?raw';
+import altTextFilenameEstonianPrompt from '../prompts/altTextFilenameEstonian.txt?raw';
+import altTextTranslateEstonianPrompt from '../prompts/altTextTranslateEstonian.txt?raw';
+
+import altTextIcelandicPrompt from '../prompts/altTextMainIcelandic.txt?raw';
+import altTextFilenameIcelandicPrompt from '../prompts/altTextFilenameIcelandic.txt?raw';
+import altTextTranslateIcelandicPrompt from '../prompts/altTextTranslateIcelandic.txt?raw';
+
+import altTextNorwegianPrompt from '../prompts/altTextMainNorwegian.txt?raw';
+import altTextFilenameNorwegianPrompt from '../prompts/altTextFilenameNorwegian.txt?raw';
+import altTextTranslateNorwegianPrompt from '../prompts/altTextTranslateNorwegian.txt?raw';
+
 import transcriptionIncludeHeadersPrompt from '../prompts/transcriptionIncludeHeaders.txt?raw';
 import transcriptionIgnoreHeadersPrompt from '../prompts/transcriptionIgnoreHeaders.txt?raw';
 import transcriptionTeiPrompt from '../prompts/transcriptionTei.txt?raw';
@@ -25,7 +49,7 @@ console.log(
 */
 
 export type TaskTypeId = 'altText' | 'transcription' | 'transcriptionBatchTei';
-export type LanguageCode = 'lv' | 'en' | 'sv' | 'fi' ;
+export type LanguageCode = 'lv' | 'dk' | 'ee' | 'en' | 'fi' | 'is' | 'lt' | 'no' | 'sv' ;
 
 export const TASK_CONFIGS: TaskTypeConfig[] = [
   {
@@ -48,22 +72,52 @@ export const TASK_CONFIGS: TaskTypeConfig[] = [
         prompt: altTextLatvianPrompt
       },
       {
+        id: 'dk',
+        label: 'Dāņu',
+        languageCode: 'dk',
+        prompt: altTextDanishPrompt
+      },
+      {
+        id: 'ee',
+        label: 'Igauņu',
+        languageCode: 'ee',
+        prompt: altTextEstonianPrompt
+      },
+      {
         id: 'en',
         label: 'Angļu',
         languageCode: 'en',
         prompt: altTextEnglishPrompt
       },
       {
-        id: 'sv',
-        label: 'Zviedru',
-        languageCode: 'sv',
-        prompt: altTextSwedishPrompt
-      },
-      {
         id: 'fi',
         label: 'Somu',
         languageCode: 'fi',
         prompt: altTextFinnishPrompt
+      },
+      {
+        id: 'is',
+        label: 'Islandiešu',
+        languageCode: 'is',
+        prompt: altTextIcelandicPrompt
+      },
+      {
+        id: 'lt',
+        label: 'Lietuviešu',
+        languageCode: 'lt',
+        prompt: altTextLithuanianPrompt
+      },
+      {
+        id: 'no',
+        label: 'Norvēģu',
+        languageCode: 'no',
+        prompt: altTextFinnishPrompt
+      },
+      {
+        id: 'sv',
+        label: 'Zviedru',
+        languageCode: 'sv',
+        prompt: altTextSwedishPrompt
       },
 
     ],
@@ -72,13 +126,23 @@ export const TASK_CONFIGS: TaskTypeConfig[] = [
         sv: altTextFilenameSwedishPrompt,
         fi: altTextFilenameFinnishPrompt,
         en: altTextFilenameEnglishPrompt,
-        lv: altTextFilenameLatvianPrompt
+        lv: altTextFilenameLatvianPrompt,
+        lt: altTextFilenameLithuanianPrompt,
+        dk: altTextFilenameDanishPrompt,
+        ee: altTextFilenameEstonianPrompt,
+        is: altTextFilenameIcelandicPrompt,
+        no: altTextFilenameNorwegianPrompt
       },
       translatePrompt: {
         sv: altTextTranslateSwedishPrompt,
         fi: altTextTranslateFinnishPrompt,
         en: altTextTranslateEnglishPrompt,
-        lv: altTextTranslateLatvianPrompt
+        lv: altTextTranslateLatvianPrompt,
+        lt: altTextTranslateLithuanianPrompt,
+        ee: altTextTranslateEstonianPrompt,
+        dk: altTextTranslateDanishPrompt,
+        no: altTextTranslateNorwegianPrompt,
+        is: altTextTranslateIcelandicPrompt
       },
     },
   },
