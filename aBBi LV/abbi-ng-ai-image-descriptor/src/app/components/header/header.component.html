@@ -26,8 +26,14 @@
  
 </header>
   @if (showInfoOverlay()) {
-  <div class="info-overlay" role="dialog" aria-modal="true" aria-labelledby="info-overlay-title">
-    <div class="info-overlay-panel">
+  <div
+  class="info-overlay"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="info-overlay-title"
+  (click)="closeInfoOverlay()"
+>
+  <div class="info-overlay-panel" (click)="$event.stopPropagation()">
       
       
       <button
