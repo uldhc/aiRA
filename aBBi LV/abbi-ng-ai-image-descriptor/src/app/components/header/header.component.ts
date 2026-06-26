@@ -30,4 +30,4 @@ export class HeaderComponent {
     this.openInfoSection.update(current =>
       current === section ? null : section
     );
-  }}
+  }
