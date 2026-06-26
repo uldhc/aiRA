@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -11,4 +11,15 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class HeaderComponent {
   @Input() showLanguageButton = true;
+
+  showInfoOverlay = signal(false);
+
+  openInfoOverlay(event: Event) {
+    event.preventDefault();
+    this.showInfoOverlay.set(true);
+  }
+
+  closeInfoOverlay() {
+    this.showInfoOverlay.set(false);
+  }
 }
